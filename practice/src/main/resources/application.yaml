@@ -1,0 +1,8 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/practicespringbootdb
+    username: postgres
+    password: paityn
+    pool-size: 30
+    driverClassName: org.postgresql.Driver
+    spring.flyway.baselineOnMigrate: true

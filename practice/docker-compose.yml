@@ -1,0 +1,20 @@
+version: '3'
+services:
+  app:
+    container_name: practice-spring
+    image: jpragasa/spring-boot-practice
+    build: ./
+    ports:
+    - "8080:8080"
+    depends_on:
+      - postgres-db
+  postgres-db:
+    container_name: postgres-db
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: paityn
+      POSTGRES_DB: practicespringbootdb
